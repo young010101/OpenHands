@@ -21,4 +21,4 @@ RUN apt-get update -y && \
 RUN wget https://fsl.fmrib.ox.ac.uk/fsldownloads/fslconda/releases/fslinstaller.py && \
     python ./fslinstaller.py -d /usr/local/fsl/
 
-ENTRYPOINT [ "sh", "-c", ". /usr/local/fsl/etc/fslconf/fsl.sh && /bin/bash" ]
+RUN echo '. /usr/local/fsl/etc/fslconf/fsl.sh' >> /etc/bash.rc
